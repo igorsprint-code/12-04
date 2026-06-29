@@ -38,6 +38,7 @@ HAVING cust_quantity > 300
 
 Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
 
+ Скрипт:
 ```SQL
 SELECT COUNT(film_id)
 FROM film f
@@ -58,6 +59,8 @@ WHERE f.length > (SELECT AVG(length) FROM film)
 Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
 
 ### Решение
+
+ Скрипт:
 ```SQL
 SELECT DATE_FORMAT (p.payment_date, '%Y-%m') AS yearmonth, SUM(p.amount) AS total, COUNT(r.rental_id ) 	
 FROM payment p
