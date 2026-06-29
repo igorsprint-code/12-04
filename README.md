@@ -11,7 +11,7 @@
  
  Скрипт:
 ```SQL
-SELECT s.store_id, stf.first_name, stf.last_name, ct.city, COUNT(c.customer_id) AS cust_quantity
+SELECT s.store_id, CONCAT(stf.first_name, ' ', stf.last_name) AS fio, ct.city, COUNT(c.customer_id) AS cust_quantity
 FROM store s
 LEFT JOIN customer c ON c.store_id = s.store_id
 LEFT JOIN staff stf ON stf.store_id = s.store_id
@@ -19,6 +19,7 @@ LEFT JOIN address addr ON s.address_id = addr.address_id
 LEFT JOIN city ct ON addr.city_id = ct.city_id
 GROUP BY s.store_id, stf.first_name, stf.last_name, ct.city
 HAVING cust_quantity > 300
+
 ```
 
 Результат выполнения:
@@ -32,7 +33,8 @@ HAVING cust_quantity > 300
 
 ### Задание 2
 
-Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
+
+
 
 ### Решение
 
