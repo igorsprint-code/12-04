@@ -1,4 +1,4 @@
-
+Практическое задание по занятию "Расширенные возможности SQL" Дедяхин Игорь
 
 ### Задание 1
 
@@ -10,7 +10,7 @@
 ### Решение
  
  Скрипт:
-```
+```SQL
 SELECT s.store_id, stf.first_name, stf.last_name, ct.city, COUNT(c.customer_id) AS cust_quantity
 FROM store s
 LEFT JOIN customer c ON c.store_id = s.store_id
