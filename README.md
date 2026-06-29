@@ -45,7 +45,7 @@ WHERE f.length > (SELECT AVG(length) FROM film)
 ```
 Результат выполнения:
 
-![screen](screenshots/1_2.png)
+
 
 
 
