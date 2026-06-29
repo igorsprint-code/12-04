@@ -38,6 +38,14 @@ HAVING cust_quantity > 300
 
 Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
 
+```SQL
+SELECT COUNT(film_id)
+FROM film f
+WHERE f.length > (SELECT AVG(length) FROM film)
+```
+Результат выполнения:
+
+![screen](screenshots/1_2.png)
 
 
 
