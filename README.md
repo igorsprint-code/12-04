@@ -59,12 +59,7 @@ WHERE f.length > (SELECT AVG(length) FROM film)
 
 ### Решение
 ```SQL
-SELECT DATE_FORMAT (p.payment_date, '%Y-%m') AS yearmonth, SUM(p.amount) AS total, COUNT(r.rental_id ) 	
-FROM payment p
-LEFT JOIN rental r ON r.rental_id = p.rental_id 
-GROUP BY yearmonth
-ORDER BY total DESC
-LIMIT 1
+
 ```
 Результат выполнения:
 ![screen](screenshots/3_1.png)
