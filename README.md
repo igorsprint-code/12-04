@@ -24,7 +24,7 @@ HAVING cust_quantity > 300
 
 Результат выполнения:
 
-![screen](screenshots/1.png)
+
 
 
 
