@@ -21,7 +21,7 @@ GROUP BY s.store_id, stf.first_name, stf.last_name, ct.city
 HAVING cust_quantity > 300
 
 ```
-![screen](screenshots/1.png)
+![screen](screenshots/1_1.png)
 
 Результат выполнения:
 
