@@ -108,7 +108,7 @@ GROUP BY s.staff_id
 
 ### Решение
 
-```
+```SQL
 SELECT f.film_id, title, i.inventory_id
 FROM film f 
 LEFT JOIN inventory i ON i.film_id = f.film_id
