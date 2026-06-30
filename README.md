@@ -108,4 +108,13 @@ GROUP BY s.staff_id
 
 ### Решение
 
+```
+SELECT f.film_id, title, i.inventory_id
+FROM film f 
+LEFT JOIN inventory i ON i.film_id = f.film_id
+WHERE i.inventory_id IS NULL
+```
+
+![screen](screenshots/5.png)
+
 ---
