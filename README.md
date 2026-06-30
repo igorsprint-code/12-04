@@ -96,6 +96,9 @@ FROM staff s
 LEFT JOIN payment p ON p.staff_id = s.staff_id
 GROUP BY s.staff_id
 ```
+
+Результат выполнения:
+
 ![screen](screenshots/4.png)
 
 ---
@@ -114,6 +117,8 @@ FROM film f
 LEFT JOIN inventory i ON i.film_id = f.film_id
 WHERE i.inventory_id IS NULL
 ```
+
+Результат выполнения:
 
 ![screen](screenshots/5.png)
 
