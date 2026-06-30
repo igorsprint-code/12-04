@@ -96,6 +96,7 @@ FROM staff s
 LEFT JOIN payment p ON p.staff_id = s.staff_id
 GROUP BY s.staff_id
 ```
+![screen](screenshots/4.png)
 
 ---
 
