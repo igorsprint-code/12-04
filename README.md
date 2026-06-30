@@ -86,6 +86,17 @@ LIMIT 1
 
 ### Решение
 
+```SQL
+SELECT s.staff_id, CONCAT(s.first_name, ' ', s.last_name) AS fio, COUNT(p.payment_id) AS totalp,
+	CASE
+		WHEN (COUNT(p.payment_id)) > 8000 THEN 'YES'
+		ELSE 'NO'
+	END AS 'Award'	
+FROM staff s
+LEFT JOIN payment p ON p.staff_id = s.staff_id
+GROUP BY s.staff_id
+```
+
 ---
 
 Посчитайте количество продаж, выполненных каждым продавцом. Добавьте вычисляемую колонку «Премия». Если количество продаж превышает 8000, то значение в колонке будет «Да», иначе должно быть значение «Нет».
